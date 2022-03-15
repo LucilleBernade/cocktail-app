@@ -8,12 +8,15 @@ import {CocktailRandomService} from '../../services/cocktail-random-service.serv
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private cocktail:CocktailRandomService) { 
 
-    this.cocktail.getData().subscribe( data => {console.log(data)})
-  }
+
+  constructor(private cocktail:CocktailRandomService) { }
 
   ngOnInit(): void {
+    this.cocktail.getRandomCocktail().subscribe( data => {
+      console.log(data)
+    })
+    
   }
 
 }

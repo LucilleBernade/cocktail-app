@@ -9,7 +9,7 @@ export class CocktailRandomService {
 
     constructor(private http:HttpClient) { }
 
-    getData()
+    getRandomCocktail()
     {
         let url="https://www.thecocktaildb.com/api/json/v1/1/random.php";
         return this.http.get(url);
