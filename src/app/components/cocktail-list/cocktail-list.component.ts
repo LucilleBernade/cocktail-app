@@ -18,6 +18,8 @@ export class CocktailListComponent implements OnInit {
    this.cocktail$=this.cocktail.getCocktailList().pipe(
      delay(1000)
    );
+
+   
    //this.cocktail$.subscribe(
    //  console.log
    //)
