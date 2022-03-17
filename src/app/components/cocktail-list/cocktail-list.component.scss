@@ -1,0 +1,16 @@
+.cocktailCard{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.cocktailCard2{
+    border: solid 2px red;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.img{
+    width: 3rem;
+}
