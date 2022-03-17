@@ -17,7 +17,6 @@ export class CocktailsListServiceService {
         return this.http.get<Cocktails>(url);
     }
 
-    
     getDrinks(param=""): Observable<Drink[]>
   {
     return this.getCocktailList().pipe(
@@ -26,6 +25,7 @@ export class CocktailsListServiceService {
       tap(drinks=>console.log("tap3", drinks)),
      )
   }
+
 }
 
 //getCocktailList(): Observable<{"drinks":Array<Drink>}>
