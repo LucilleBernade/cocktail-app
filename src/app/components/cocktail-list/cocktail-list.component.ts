@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { delay, Observable } from 'rxjs';
+import { Cocktails } from 'src/app/models/cocktails';
 import { CocktailsListServiceService } from '../../services/cocktails-list-service.service';
 
 @Component({
@@ -9,12 +11,16 @@ import { CocktailsListServiceService } from '../../services/cocktails-list-servi
 export class CocktailListComponent implements OnInit {
   constructor(private cocktail: CocktailsListServiceService) {}
 
-  drinks!:any
+  cocktail$!: Observable<Cocktails>;
+  
 
   ngOnInit(): void {
-    this.cocktail.getCocktailList().subscribe((data) => {
-      console.log('data', data);
-    this.drinks = data.drinks
-    });
+   this.cocktail$=this.cocktail.getCocktailList().pipe(
+     delay(1000)
+   );
+   //this.cocktail$.subscribe(
+   //  console.log
+   //)
+
   }
 }

@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { CocktailsListServiceService } from 'src/app/services/cocktails-list-service.service';
 
 @Component({
   selector: 'app-cocktail',
@@ -10,8 +8,6 @@ import { CocktailsListServiceService } from 'src/app/services/cocktails-list-ser
 export class CocktailComponent implements OnInit {
 
   constructor(
-    private CocktailsListServiceService : CocktailsListServiceService,
-    private router: Router
   ) { }
 
   ngOnInit(): void {
