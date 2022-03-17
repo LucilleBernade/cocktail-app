@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map, Observable, tap } from 'rxjs';
+import { Observable, map, tap } from 'rxjs';
 import { Cocktails } from '../models/cocktails';
 import { Drink } from '../models/drink.interface';
 
