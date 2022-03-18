@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { delay, Observable } from 'rxjs';
-import { Cocktails } from 'src/app/models/cocktails';
+import { Cocktails } from 'src/app/models/cocktails.interface';
 import { CocktailsListServiceService } from '../../services/cocktails-list-service.service';
 
 @Component({

@@ -1,1 +1,17 @@
 <p>cocktail works!</p>
+<ng-container
+  *ngIf="randomCocktail$ | async as cocktail; then patate; else loader"
+></ng-container>
+<ng-template #patate let-cocktail>
+  <div *ngFor="let drink of cocktail.drinks" class="cocktailCard">
+    <div class="cocktailCard2">
+      {{ drink.strDrink }}
+      <img [src]="drink.strDrinkThumb" class="img" />
+    </div>
+  </div>
+</ng-template>
+<ng-template #loader>
+  <div>
+    <img src="https://static.tutoandco.colas-delmas.fr/uploads/2017/10/loader.gif" alt="loader">
+  </div>
+</ng-template>
